@@ -12,6 +12,7 @@
   width: 100%;
   font-family: "Ubuntu", sans-serif;
   transition: all .3s ease;
+  z-index: 1000;
 }
 
 .navbar.sticky {
@@ -66,6 +67,11 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+.home button a {
+    list-style: none;
+    text-decoration: none;
+}
+
 .home .max-width {
     margin: auto 0 auto 40rem;
 }
@@ -93,7 +99,7 @@ section {
     padding: 5rem 0;
 }
 
-.about, .skills, .projects {
+.about, .skills, .projects, .testimonials, .contact {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -165,7 +171,10 @@ section .title::before {
     text-align: justify;
 }
 
-.about .about-content .right a {
+.about .about-content .right a,
+.contact form .btn,
+.home button {
+    list-style: none;
     display: inline-block;
     background: crimson;
     color: #fff;
@@ -184,7 +193,8 @@ section .title::before {
 }
 
 .skills .title::before,
-.projects .title::before {
+.projects .title::before,
+.contact .title::before {
     background-color: #fff;
 }
 
@@ -200,7 +210,7 @@ section .title::before {
     transform: translateX(-50%);
 }
 
-.skills, .projects {
+.skills, .projects, .contact {
     background-color: #2F303A;
     color: #fff;
 }
@@ -248,6 +258,71 @@ section .title::before {
 
 .skills .skills-content .card:hover i{
     color: #fff;
+}
+
+
+.skills .skills-content .righty .bars {
+    margin-bottom: .5rem;
+}
+
+.skills .skills-content .righty .info {
+    display: flex;
+    margin-bottom: .5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .righty span {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+.skills .skills-content .righty i {
+    padding-right: 1rem;
+    font-size: 2rem;
+}
+
+.skills .skills-content .righty .line {
+    height: .5rem;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills .skills-content .righty .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    background: crimson;
+}
+
+.skills .skills-content .righty .html::before {
+    width: 80%;
+}
+
+.skills .skills-content .righty .css::before {
+    width: 70%;
+}
+
+.skills .skills-content .righty .js::before {
+    width: 60%;
+}
+
+.skills .skills-content .righty .boot::before {
+    width: 70%;
+}
+
+.skills .skills-content .righty .mysql::before {
+    width: 50%;
+}
+.skills .skills-content .righty .vue::before {
+    width: 70%;
+}
+.skills .skills-content .righty .node::before {
+    width: 75%;
 }
 
 .education .title::after {
@@ -362,4 +437,170 @@ section .title::before {
     left: 50%;
     bottom: -.8rem;
     transform: translateX(-50%);
+}
+
+.projects .box img,
+.testimonials .box img {
+    width: 100%;
+    height: 15rem;
+    transition: .5s ease;
+}
+
+.projects .icons {
+    display: flex;
+}
+
+.projects .box:hover img, 
+.testimonials .box:hover img {
+    transform: scale(1.1);
+}
+
+.projects .container,
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.projects .box {
+    position: relative;
+    box-sizing: 0 0 1rem crimson;
+    overflow: hidden;
+    display: flex;
+}
+
+.project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0 , 0 , .1), crimson);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.projects .box:hover .project-layer,
+.testimonials .box:hover .testimonial-layer {
+    transform: translateY(0);
+}
+
+.project-layer h4 {
+    font-size: 2rem;
+}
+
+.project-layer p {
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+}
+
+.project-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: crimson;
+    border-radius: 50%;
+}
+
+.project-layer a i {
+    font-size: 1rem;
+    color: #2F303A;
+}
+
+.testimonials .title::after {
+    content: 'whats said about me';
+    position: absolute;
+    padding: .2rem;
+    background-color: #fff;
+    font-size: 1.2rem;
+    color: crimson;
+    left: 50%;
+    bottom: -.8rem;
+    transform: translateX(-50%);
+}
+
+.testimonials .box {
+    position: relative;
+    box-sizing: 0 0 1rem #2F303A;
+    overflow: hidden;
+    display: flex;
+}
+
+.testimonial-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0 , 0 , .1), #2F303A);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.testimonials .box .testimonial-layer p,
+.testimonials .box .testimonial-layer h5 {
+    color: #fff;
+}
+
+.contact .title::after {
+    content: 'get in contact';
+    position: absolute;
+    padding: .2rem;
+    background-color: #2F303A;
+    font-size: 1.2rem;
+    color: crimson;
+    left: 50%;
+    bottom: -.8rem;
+    transform: translateX(-50%);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: crimson;
+    background: #4d4e51;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
 }
