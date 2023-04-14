@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  transition: all .3s ease;
+}
+
+.navbar.sticky {
+  background-color: crimson;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.navbar .navbar-brand span {
+    color: crimson;
+    transition: all .3s ease;
+}
+
+.navbar.sticky .navbar-brand span {
+    color: #fff;
+}
+
+.navbar .collapse ul li a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.navbar .collapse ul li a:hover {
+    color: crimson;
+}
+
+.navbar.sticky .collapse ul li a:hover {
+    color: #fff;
+}
+
+.max-width {
+  max-width: 1300rem;
+  padding: 0 5rem;
+  margin: auto;
+}
+
+.home {
+  display: flex;
+  background: url("assets/images/C11\ Kelebogile\ Nobomvu\ \(4\).JPG");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: #2F303A;
+  color: #fff;
+  min-height: 20rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40rem;
+}
+
+.home .home-content .text1 {
+    font-size: 2rem;
+}
+
+.home .home-content .text2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left: -.2rem;
+}
+
+.home .home-content .text3 {
+    font-size: 2rem;
+    margin: .2rem 0;
+}
+
+.home .home-content .text3 span {
+    color: crimson;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.about, .skills, .projects {
+    font-family: 'Poppins', sans-serif;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+    content: '';
+    position: absolute;
+    width: 13rem;
+    height: .2rem;
+    background-color: #2F303A;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.about .title::after {
+    content: 'who i am';
+    position: absolute;
+    padding: .3rem;
+    background-color: #fff;
+    font-size: 1.2rem;
+    color: crimson;
+    left: 50%;
+    bottom: -.8rem;
+    transform: translateX(-50%);
+}
+
+.about .about-content .left img {
+    height: 40rem;
+    width: 30rem;
+    object-fit: cover;
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left {
+    width: 45%
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.about .about-content .right .text span {
+    color: crimson;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    border-radius: .5rem;
+    border: .1rem solid crimson;
+    transition: all .3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: crimson;
+    background: none;
+}
+
+.skills .title::before,
+.projects .title::before {
+    background-color: #fff;
+}
+
+.skills .title::after {
+    content: 'my skills';
+    position: absolute;
+    padding: .2rem;
+    background-color: #2F303A;
+    font-size: 1.2rem;
+    color: crimson;
+    left: 50%;
+    bottom: -.8rem;
+    transform: translateX(-50%);
+}
+
+.skills, .projects {
+    background-color: #2F303A;
+    color: #fff;
+}
+
+.skills .skills-content .row {
+    padding-bottom: 2rem;
+}
+
+.skills .skills-content .card {
+    /* width: calc(50% - 1rem); */
+    height: 15rem;
+    background-color: #222;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: .3rem;
+    padding: 2rem 2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.skills .skills-content .card i {
+    font-size: 2rem;
+    color: crimson;
+    transition: color .3s ease;
+}
+
+.skills .skills-content .card .text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem 0 1rem 0;
+}
+
+.skills .skills-content .card .box {
+    transition: all .3s ease;
+}
+
+.skills .skills-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.skills .skills-content .card:hover {
+    background-color: crimson;
+}
+
+.skills .skills-content .card:hover i{
+    color: #fff;
+}
+
+.education .title::after {
+    content: 'my experience';
+    position: absolute;
+    padding: .2rem;
+    background-color: #fff;
+    font-size: 1.2rem;
+    color: crimson;
+    left: 50%;
+    bottom: -.8rem;
+    transform: translateX(-50%);
+}
+
+
+.timeline {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    position: relative;
+    max-width: 1200rem;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: .3rem;
+    background-color: #2F303A;
+    top: 0;
+    bottom: 0;
+    left: 49.5%;
+    margin-left: -.1rem;
+    margin-top: 2rem;
+}
+
+.content {
+    text-align: center;
+}
+
+.containery {
+    padding: 2rem 4rem;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.containery::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: -.5rem;
+    background-color: white;
+    border: .2rem solid crimson;
+    top: .7rem;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.lefty {
+    left: 0;
+}
+
+.righty {
+    left: 50%;
+}
+
+.lefty::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 4rem;
+    width: 0;
+    z-index: 1;
+    right: 2rem;
+    border: medium solid white;
+    border-width: .5rem 0 .5rem .5rem;
+    border-color: transparent transparent transparent #2F303A;
+}
+
+.righty::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 2rem;
+    width: 0;
+    z-index: 1;
+    left: 2rem;
+    border: medium solid white;
+    border-width: .5rem .5rem .5rem 0;
+    border-color: transparent #2F303A transparent transparent;
+}
+
+.righty::after {
+    left: -16px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: crimson;
+    position: relative;
+    border-radius: 6px;
+}
+
+.projects .title::after {
+    content: 'what i have done';
+    position: absolute;
+    padding: .2rem;
+    background-color: #2F303A;
+    font-size: 1.2rem;
+    color: crimson;
+    left: 50%;
+    bottom: -.8rem;
+    transform: translateX(-50%);
+}
