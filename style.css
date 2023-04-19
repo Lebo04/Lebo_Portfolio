@@ -7,11 +7,12 @@
   text-decoration: none;
 }
 
+/*---------Navbar styling---------*/
 .navbar {
   position: fixed;
   width: 100%;
   font-family: "Ubuntu", sans-serif;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   z-index: 1000;
 }
 
@@ -26,12 +27,12 @@
 }
 
 .navbar .navbar-brand span {
-    color: crimson;
-    transition: all .3s ease;
+  color: crimson;
+  transition: all 0.3s ease;
 }
 
 .navbar.sticky .navbar-brand span {
-    color: #fff;
+  color: #fff;
 }
 
 .navbar .collapse ul li a {
@@ -42,15 +43,15 @@
 }
 
 .navbar .collapse ul li a:hover {
-    color: crimson;
+  color: crimson;
 }
 
 .navbar.sticky .collapse ul li a:hover {
-    color: #fff;
+  color: #fff;
 }
 
+/*---------Home Section styling---------*/
 .max-width {
-  max-width: 1300rem;
   padding: 0 5rem;
   margin: auto;
 }
@@ -58,549 +59,828 @@
 .home {
   display: flex;
   background: url("assets/images/C11\ Kelebogile\ Nobomvu\ \(4\).JPG");
-  background-size: contain; 
+  background-size: contain;
   background-repeat: no-repeat;
   height: 100vh;
-  background-color: #2F303A;
+  background-color: #2f303a;
   color: #fff;
   min-height: 20rem;
   font-family: "Ubuntu", sans-serif;
 }
 
 .home button a {
-    list-style: none;
-    text-decoration: none;
+  list-style: none;
+  text-decoration: none;
+  color: white;
 }
 
 .home .max-width {
-    margin: auto 0 auto 40rem;
+  margin: auto 0 auto 40rem;
 }
 
 .home .home-content .text1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .home .home-content .text2 {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-left: -.2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-left: -0.2rem;
 }
 
 .home .home-content .text3 {
-    font-size: 2rem;
-    margin: .2rem 0;
+  font-size: 2rem;
+  margin: 0.2rem 0;
 }
 
 .home .home-content .text3 span {
-    color: crimson;
+  color: crimson;
 }
 
+.bubble {
+  background-color: crimson;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+}
+
+.texty {
+  animation-duration: 0.5s;
+  animation-name: anime;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.texty .pop {
+  animation-name: animate-pop;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+
+@keyframes animate-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.6s;
+}
+
+.delay-2 {
+  animation-delay: 0.7s;
+}
+
+/*---------About Section styling---------*/
 section {
-    padding: 5rem 0;
+  padding: 5rem 0;
 }
 
-.about, .skills, .projects, .testimonials, .contact {
-    font-family: 'Poppins', sans-serif;
+.about,
+.skills,
+.projects,
+.testimonials,
+.contact {
+  font-family: "Poppins", sans-serif;
 }
 
 section .title {
-    position: relative;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-bottom: 4rem;
-    padding-bottom: 1rem;
-    font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+  font-family: "Ubuntu", sans-serif;
 }
 
 section .title::before {
-    content: '';
-    position: absolute;
-    width: 13rem;
-    height: .2rem;
-    background-color: #2F303A;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  width: 13rem;
+  height: 0.2rem;
+  background-color: #2f303a;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
 }
 
 .about .title::after {
-    content: 'who i am';
-    position: absolute;
-    padding: .3rem;
-    background-color: #fff;
-    font-size: 1.2rem;
-    color: crimson;
-    left: 50%;
-    bottom: -.8rem;
-    transform: translateX(-50%);
+  content: "who i am";
+  position: absolute;
+  padding: 0.3rem;
+  background-color: #fff;
+  font-size: 1.2rem;
+  color: crimson;
+  left: 50%;
+  bottom: -0.8rem;
+  transform: translateX(-50%);
 }
 
 .about .about-content .left img {
-    height: 40rem;
-    width: 30rem;
-    object-fit: cover;
+  height: 40rem;
+  width: 30rem;
+  object-fit: cover;
 }
 
 .about .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .about .about-content .left {
-    width: 45%
+  width: 45%;
 }
 
 .about .about-content .right {
-    width: 55%;
+  width: 55%;
 }
 
 .about .about-content .right .text {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .about .about-content .right .text span {
-    color: crimson;
+  color: crimson;
 }
 
 .about .about-content .right p {
-    text-align: justify;
+  text-align: justify;
 }
 
 .about .about-content .right a,
 .contact form .btn,
 .home button {
-    list-style: none;
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 1rem 2rem;
-    margin-top: 1.5rem;
-    border-radius: .5rem;
-    border: .1rem solid crimson;
-    transition: all .3s ease;
+  list-style: none;
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid crimson;
+  transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover,
+.contact form .btn:hover,
+.home button:hover {
+  background: #2f303a;
 }
 
 .about .about-content .right a:hover {
-    color: crimson;
-    background: none;
+  color: crimson;
+  background: none;
 }
 
+/*---------Skills Section styling---------*/
 .skills .title::before,
 .projects .title::before,
 .contact .title::before {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .skills .title::after {
-    content: 'my skills';
-    position: absolute;
-    padding: .2rem;
-    background-color: #2F303A;
-    font-size: 1.2rem;
-    color: crimson;
-    left: 50%;
-    bottom: -.8rem;
-    transform: translateX(-50%);
+  content: "my skills";
+  position: absolute;
+  padding: 0.2rem;
+  background-color: #2f303a;
+  font-size: 1.2rem;
+  color: crimson;
+  left: 50%;
+  bottom: -0.8rem;
+  transform: translateX(-50%);
 }
 
-.skills, .projects, .contact {
-    background-color: #2F303A;
-    color: #fff;
+.skills,
+.projects,
+.contact {
+  background-color: #2f303a;
+  color: #fff;
 }
 
-.skills .skills-content .row {
-    padding-bottom: 2rem;
+.skills .skills-content .row,
+.projects .project-content .row {
+  padding-bottom: 2rem;
 }
 
 .skills .skills-content .card {
-    /* width: calc(50% - 1rem); */
-    height: 15rem;
-    background-color: #222;
-    text-align: center;
-    justify-content: center;
-    color: #fff;
-    border-radius: .3rem;
-    padding: 2rem 2rem;
-    cursor: pointer;
-    transition: all .3s ease;
+  /* width: calc(50% - 1rem); */
+  height: 15rem;
+  background-color: #222;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 0.3rem;
+  padding: 2rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .skills .skills-content .card i {
-    font-size: 2rem;
-    color: crimson;
-    transition: color .3s ease;
+  font-size: 2rem;
+  color: crimson;
+  transition: color 0.3s ease;
 }
 
 .skills .skills-content .card .text {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin: 1rem 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0 1rem 0;
 }
 
 .skills .skills-content .card .box {
-    transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .skills .skills-content .card:hover .box {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .skills .skills-content .card:hover {
-    background-color: crimson;
+  background-color: crimson;
 }
 
-.skills .skills-content .card:hover i{
-    color: #fff;
+.skills .skills-content .card:hover i {
+  color: #fff;
 }
 
-
-.skills .skills-content .righty .bars {
-    margin-bottom: .5rem;
-}
-
-.skills .skills-content .righty .info {
-    display: flex;
-    margin-bottom: .5rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.skills .skills-content .righty span {
-    font-weight: 500;
-    font-size: 1rem;
-    padding: .5rem;
-}
-
-.skills .skills-content .righty i {
-    padding-right: 1rem;
-    font-size: 2rem;
-}
-
-.skills .skills-content .righty .line {
-    height: .5rem;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-
-.skills .skills-content .righty .line::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0%;
-    top: 0%;
-    background: crimson;
-}
-
-.skills .skills-content .righty .html::before {
-    width: 80%;
-}
-
-.skills .skills-content .righty .css::before {
-    width: 70%;
-}
-
-.skills .skills-content .righty .js::before {
-    width: 60%;
-}
-
-.skills .skills-content .righty .boot::before {
-    width: 70%;
-}
-
-.skills .skills-content .righty .mysql::before {
-    width: 50%;
-}
-.skills .skills-content .righty .vue::before {
-    width: 70%;
-}
-.skills .skills-content .righty .node::before {
-    width: 75%;
-}
-
+/*---------Resume Section styling---------*/
 .education .title::after {
-    content: 'my experience';
-    position: absolute;
-    padding: .2rem;
-    background-color: #fff;
-    font-size: 1.2rem;
-    color: crimson;
-    left: 50%;
-    bottom: -.8rem;
-    transform: translateX(-50%);
+  content: "my experience";
+  position: absolute;
+  padding: 0.2rem;
+  background-color: #fff;
+  font-size: 1.2rem;
+  color: crimson;
+  left: 50%;
+  bottom: -0.8rem;
+  transform: translateX(-50%);
 }
-
 
 .timeline {
-    padding-top: 1rem;
-    padding-bottom: 4rem;
-    position: relative;
-    max-width: 1200rem;
-    margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  position: relative;
+  max-width: 1200rem;
+  margin: 0 auto;
 }
 
 .timeline::after {
-    content: "";
-    position: absolute;
-    width: .3rem;
-    background-color: #2F303A;
-    top: 0;
-    bottom: 0;
-    left: 49.5%;
-    margin-left: -.1rem;
-    margin-top: 2rem;
+  content: "";
+  position: absolute;
+  width: 0.3rem;
+  background-color: #2f303a;
+  top: 0;
+  bottom: 0;
+  left: 49.5%;
+  margin-left: -0.1rem;
+  margin-top: 2rem;
 }
 
 .content {
-    text-align: center;
+  text-align: center;
 }
 
 .containery {
-    padding: 2rem 4rem;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
+  padding: 2rem 4rem;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
 }
 
 .containery::after {
-    content: "";
-    position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    right: -.5rem;
-    background-color: white;
-    border: .2rem solid crimson;
-    top: .7rem;
-    border-radius: 50%;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  right: -0.5rem;
+  background-color: white;
+  border: 0.2rem solid crimson;
+  top: 0.7rem;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .lefty {
-    left: 0;
+  left: 0;
 }
 
 .righty {
-    left: 50%;
+  left: 50%;
 }
 
 .lefty::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 4rem;
-    width: 0;
-    z-index: 1;
-    right: 2rem;
-    border: medium solid white;
-    border-width: .5rem 0 .5rem .5rem;
-    border-color: transparent transparent transparent #2F303A;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 4rem;
+  width: 0;
+  z-index: 1;
+  right: 2rem;
+  border: medium solid white;
+  border-width: 0.5rem 0 0.5rem 0.5rem;
+  border-color: transparent transparent transparent #2f303a;
 }
 
 .righty::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 2rem;
-    width: 0;
-    z-index: 1;
-    left: 2rem;
-    border: medium solid white;
-    border-width: .5rem .5rem .5rem 0;
-    border-color: transparent #2F303A transparent transparent;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 2rem;
+  width: 0;
+  z-index: 1;
+  left: 2rem;
+  border: medium solid white;
+  border-width: 0.5rem 0.5rem 0.5rem 0;
+  border-color: transparent #2f303a transparent transparent;
 }
 
 .righty::after {
-    left: -16px;
+  left: -16px;
 }
 
 .content {
-    padding: 20px 30px;
-    background-color: crimson;
-    position: relative;
-    border-radius: 6px;
+  padding: 20px 30px;
+  background-color: crimson;
+  position: relative;
+  border-radius: 6px;
 }
 
+/*---------Projects Section styling---------*/
 .projects .title::after {
-    content: 'what i have done';
-    position: absolute;
-    padding: .2rem;
-    background-color: #2F303A;
-    font-size: 1.2rem;
-    color: crimson;
-    left: 50%;
-    bottom: -.8rem;
-    transform: translateX(-50%);
+  content: "what i have done";
+  position: absolute;
+  padding: 0.2rem;
+  background-color: #2f303a;
+  font-size: 1.2rem;
+  color: crimson;
+  left: 50%;
+  bottom: -0.8rem;
+  transform: translateX(-50%);
 }
 
-.projects .box img,
+.projects .box img {
+  width: 100%;
+  height: 17rem;
+  transition: 0.5s ease;
+}
+
 .testimonials .box img {
-    width: 100%;
-    height: 15rem;
-    transition: .5s ease;
+  width: 100%;
+  transition: 0.5s ease;
 }
 
 .projects .icons {
-    display: flex;
+  display: flex;
 }
 
-.projects .box:hover img, 
+.projects .box:hover img,
 .testimonials .box:hover img {
-    transform: scale(1.1);
-}
-
-.projects .container,
-.testimonials .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
+  transform: scale(1.1);
 }
 
 .projects .box {
-    position: relative;
-    box-sizing: 0 0 1rem crimson;
-    overflow: hidden;
-    display: flex;
+  position: relative;
+  box-sizing: 0 0 1rem crimson;
+  overflow: hidden;
+  display: flex;
 }
 
 .project-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0 , 0 , .1), crimson);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: .5s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), crimson);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
 }
 
 .projects .box:hover .project-layer,
 .testimonials .box:hover .testimonial-layer {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .project-layer h4 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .project-layer p {
-    font-size: 1rem;
-    margin: .3rem 0 1rem;
+  font-size: 1rem;
+  margin: 0.3rem 0 1rem;
 }
 
 .project-layer a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    background-color: crimson;
-    border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: crimson;
+  border-radius: 50%;
+}
+
+.project-layer a:hover {
+  width: 4rem;
+  height: 4rem;
 }
 
 .project-layer a i {
-    font-size: 1rem;
-    color: #2F303A;
+  font-size: 1rem;
+  color: #2f303a;
 }
 
+/*---------Testimonials Section styling---------*/
 .testimonials .title::after {
-    content: 'whats said about me';
-    position: absolute;
-    padding: .2rem;
-    background-color: #fff;
-    font-size: 1.2rem;
-    color: crimson;
-    left: 50%;
-    bottom: -.8rem;
-    transform: translateX(-50%);
+  content: "whats said about me";
+  position: absolute;
+  padding: 0.2rem;
+  background-color: #fff;
+  font-size: 1.2rem;
+  color: crimson;
+  left: 50%;
+  bottom: -0.8rem;
+  transform: translateX(-50%);
 }
 
 .testimonials .box {
-    position: relative;
-    box-sizing: 0 0 1rem #2F303A;
-    overflow: hidden;
-    display: flex;
+  position: relative;
+  box-sizing: 0 0 1rem #2f303a;
+  overflow: hidden;
+  display: flex;
+  /* width: 26rem;
+  height: 28rem;
+  margin-bottom: 3rem; */
+  box-sizing: 0 0 1rem crimson;
+  margin-bottom: 3rem;
 }
 
 .testimonial-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0 , 0 , .1), #2F303A);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: .5s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #2f303a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
 }
 
 .testimonials .box .testimonial-layer p,
 .testimonials .box .testimonial-layer h5 {
-    color: #fff;
+  color: #fff;
 }
 
+/*---------Contact Section styling---------*/
 .contact .title::after {
-    content: 'get in contact';
-    position: absolute;
-    padding: .2rem;
-    background-color: #2F303A;
-    font-size: 1.2rem;
-    color: crimson;
-    left: 50%;
-    bottom: -.8rem;
-    transform: translateX(-50%);
+  content: "get in contact";
+  position: absolute;
+  padding: 0.2rem;
+  background-color: #2f303a;
+  font-size: 1.2rem;
+  color: crimson;
+  left: 50%;
+  bottom: -0.8rem;
+  transform: translateX(-50%);
 }
 
 .contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .contact form .input-box {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: wrap;
 }
 
 .contact form .input-box input,
 .contact form textarea {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    color: crimson;
-    background: #4d4e51;
-    margin: .7rem 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: crimson;
+  background: #4d4e51;
+  margin: 0.7rem 0;
 }
 
 .contact form .input-box input {
-    width: 49%;
+  width: 49%;
 }
 
 .contact form textarea {
-    resize: none;
+  resize: none;
 }
 
 .contact form .btn {
-    margin-top: 2rem;
-    cursor: pointer;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.contact .details {
+  background: #222;
+  text-align: center;
+  max-width: 70rem;
+  margin: 1rem auto;
+}
+
+.contact .details i {
+  color: crimson;
+}
+
+/*---------Footer Section styling---------*/
+footer {
+  background-color: crimson;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: #ffff;
+  text-align: center;
+}
+
+footer .socials {
+  position: absolute;
+  width: fit-content;
+  right: 2rem;
+  top: 0.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .home .max-width {
+    margin: auto 0 auto 25rem;
+  }
+  .bubble {
+    width: 0rem;
+    height: 0rem;
+    border-radius: 50%;
+  }
+
+  .home .home-content .text1 {
+    font-size: 1.5rem;
+  }
+
+  .home .home-content .text2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: -0.2rem;
+  }
+
+  .home .home-content .text3 {
+    font-size: 1.5rem;
+    margin: 0.2rem 0;
+  }
+
+  .about .about-content .left img {
+    height: 20rem;
+    width: 10rem;
+    object-fit: cover;
+  }
+  .about .about-content .right .text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .about .about-content .right .text span {
+    color: crimson;
+  }
+  .about .about-content .right p {
+    font-size: 0.8rem;
+  }
+
+  .about .about-content .right a,
+  .contact form .btn,
+  .home button {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+  }
+  .skills .skills-content .card .text {
+    font-size: 1.2rem;
+  }
+
+  .timeline {
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .containery {
+    padding: 1rem 2rem;
+    width: 45%;
+  }
+
+  .containery::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: -0.5rem;
+    background-color: white;
+    border: 0.2rem solid crimson;
+    top: 0.7rem;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .lefty {
+    left: 5%;
+  }
+
+  .lefty::before {
+    right: 1rem;
+  }
+
+  .righty::before {
+    left: 1rem;
+  }
+
+  .content {
+    padding: 10px 20px;
+    background-color: crimson;
+    position: relative;
+    border-radius: 6px;
+  }
+  .testimonials .box {
+    width: 10rem;
+    height: 15rem;
+    margin-bottom: 3rem;
+  }
+  .testimonial-layer {
+    height: 500%;
+  }
+  .testimonial-layer h5 {
+    font-size: 1rem;
+  }
+  .testimonial-layer p {
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1182px) {
+  .bubble {
+    width: 0rem;
+    height: 0rem;
+    border-radius: 50%;
+  }
+
+  .about .about-content .left img {
+    height: 40rem;
+    width: 23rem;
+    object-fit: cover;
+  }
+  .about .about-content .right .text {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .about .about-content .right p {
+    font-size: 1rem;
+  }
+
+  .about .about-content .right a,
+  .contact form .btn,
+  .home button {
+    font-size: 1rem;
+  }
+
+  .testimonial-layer {
+    height: 200%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  .bubble {
+    width: 0rem;
+    height: 0rem;
+    border-radius: 50%;
+  }
+  .home .max-width {
+    margin: auto 0 auto 25rem;
+  }
+  .about .about-content .left img {
+    height: 35rem;
+    width: 18rem;
+    object-fit: cover;
+  }
+  .about .about-content .right .text {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .about .about-content .right p {
+    font-size: 1rem;
+  }
+
+  .about .about-content .right a,
+  .contact form .btn,
+  .home button {
+    font-size: 1rem;
+  }
+
+  .testimonial-layer {
+    height: 500%;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .bubble {
+    width: 0rem;
+    height: 0rem;
+    border-radius: 50%;
+  }
+  .home {
+    background-size: auto;
+  }
+  .home .max-width {
+    margin: auto 0 auto 5rem;
+  }
+  .about .about-content .left img {
+    height: 20rem;
+    width: 10rem;
+  }
+  .about .about-content .right .text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+  }
+  .about .about-content .right p {
+    font-size: .7rem;
+  }
+
+  .about .about-content .right a,
+  .contact form .btn,
+  .home button {
+    font-size: .7rem;
+  }
+
+  .skills .skills-content .card .text {
+    font-size: .7rem;
+  }
+  .testimonials .box {
+    width: 9rem;
+    height: 11rem;
+    margin-bottom: 3rem;
+  }
+
+  .testimonial-layer {
+    height: 500%;
+  }
+
+  .timeline {
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .containery {
+    padding: 1rem 2rem;
+    width: 45%;
+  }
+
+  .content {
+    padding: 5px 10px;
+  }
+
+
 }
