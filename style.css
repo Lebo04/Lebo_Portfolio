@@ -535,10 +535,9 @@ section .title::before {
   box-sizing: 0 0 1rem #2f303a;
   overflow: hidden;
   display: flex;
-  /* width: 26rem;
+  width: 26rem;
   height: 28rem;
-  margin-bottom: 3rem; */
-  box-sizing: 0 0 1rem crimson;
+  margin-bottom: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -643,7 +642,12 @@ footer .socials {
   position: absolute;
   width: fit-content;
   right: 2rem;
-  top: 0.2rem;
+  top: 0rem;
+  font-size: 1.5rem;
+}
+
+footer .socials a{
+  color: #111;
 }
 
 @media screen and (max-width: 768px) {
